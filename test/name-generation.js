@@ -1,4 +1,3 @@
-'use strict'
 const tap = require('tap')
 const nsaname = require('../lib/nsaname.js')
 
