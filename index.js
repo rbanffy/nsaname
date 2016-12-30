@@ -1,91 +1,10 @@
 #! /usr/bin/env node
-
+'use strict'
 /* eslint no-console: ["error", { allow: ["log"] }] */
 
 const getUsage = require('command-line-usage')
 const commandLineArgs = require('command-line-args')
-
-const first = [
-  'Candy',
-  'Cotton',
-  'Cross',
-  'Deity',
-  'Dropout',
-  'Feed',
-  'Fire',
-  'Gopher',
-  'Gourmet',
-  'Halux',
-  'Head',
-  'Howler',
-  'Irate',
-  'Iron',
-  'Jet',
-  'Junior',
-  'Loud',
-  'Maestro',
-  'Monkey',
-  'Night',
-  'Photo',
-  'Rage',
-  'School',
-  'Sierra',
-  'Somber',
-  'Souffle',
-  'Stucco',
-  'Surly',
-  'Swap',
-  'Tawdry',
-  'Tote',
-  'Trinity',
-  'Water',
-  'Wistful'
-]
-
-const second = [
-  ' CTX',
-  ' EBSR',
-  'Anglo',
-  'Auto',
-  'Beam',
-  'Bounce',
-  'Calendar',
-  'Chef',
-  'Cyclone',
-  'Entourage',
-  'Genesis',
-  'Ghostly',
-  'Ginsu',
-  'Gram',
-  'Jeep',
-  'Knave',
-  'Maestro',
-  'Master',
-  'Mint',
-  'Monk',
-  'Monkey',
-  'Montana',
-  'Mouth',
-  'Nebula',
-  'Picasso',
-  'Plow',
-  'Set',
-  'Sparrow',
-  'Spawn',
-  'Stand',
-  'Swap',
-  'Thorugh',
-  'Toll',
-  'Trinity',
-  'Typhon',
-  'Walk',
-  'Watch',
-  'Water',
-  'Witch',
-  'Yard'
-]
-
-const suffixes = ['HX', 'I', 'II', 'III', '4000', 'Hx9', '2.0']
+const nsaname = require('./lib/nsaname.js')
 
 const helpSections = [
   {
@@ -116,19 +35,8 @@ const commandLineOptionDefinitions = [
 
 const options = commandLineArgs(commandLineOptionDefinitions)
 
-var getName = function () {
-  var nsaname = first[Math.floor(Math.random() * first.length)] +
-      second[Math.floor(Math.random() * second.length)]
-
-  if (Math.random() > 0.7) {
-    nsaname += ' ' +
-            suffixes[Math.floor(Math.random() * suffixes.length)]
-  }
-  return nsaname
-}
-
 if (options.help) {
   console.log(usage)
 } else {
-  console.log(getName())
+  console.log(nsaname.getNSAName())
 }
