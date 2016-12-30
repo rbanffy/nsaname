@@ -1,6 +1,11 @@
 #! /usr/bin/env node
 
-const FIRST = [
+/* eslint no-console: ["error", { allow: ["log"] }] */
+
+const getUsage = require('command-line-usage');
+const commandLineArgs = require('command-line-args');
+
+const first = [
     "Candy",
     "Cotton",
     "Cross",
@@ -37,7 +42,7 @@ const FIRST = [
     "Wistful"
 ];
 
-const SECOND = [
+const second = [
     " CTX",
     " EBSR",
     "Anglo",
@@ -80,14 +85,46 @@ const SECOND = [
     "Yard"
 ];
 
-const SUFFIXES = ["HX", "I", "II", "III", "4000", "Hx9", "2.0"];
+const suffixes = ["HX", "I", "II", "III", "4000", "Hx9", "2.0"];
 
-var nsaname = FIRST[Math.floor(Math.random() * FIRST.length)] +
-    SECOND[Math.floor(Math.random() * SECOND.length)];
+const helpSections = [
+    {
+        header: 'NSA Name',
+        content: 'Like petname, but for naming secret projects and tools.'
+    },
+    {
+        header: 'Options',
+        optionList: [
+            {
+                name: 'help',
+                description: 'Print this usage guide.'
+            }
+        ]
+    }
+];
 
-if (Math.random() > .7) {
-    nsaname += " " +
-        SUFFIXES[Math.floor(Math.random() * SUFFIXES.length)];
+const usage = getUsage(helpSections);
+
+const commandLineOptionDefinitions = [
+    {
+        name: 'help',
+        alias: 'h',
+        type: Boolean,
+        defaultOption: false
+    }
+];
+
+const options = commandLineArgs(commandLineOptionDefinitions);
+
+if (options.help) {
+    console.log(usage);
+} else {
+    var nsaname = first[Math.floor(Math.random() * first.length)] +
+        second[Math.floor(Math.random() * second.length)];
+
+    if (Math.random() > .7) {
+        nsaname += " " +
+            suffixes[Math.floor(Math.random() * suffixes.length)];
+    }
+    console.log(nsaname);
 }
-
-console.log(nsaname);
