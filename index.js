@@ -37,5 +37,5 @@ const options = commandLineArgs(commandLineOptionDefinitions)
 if (options.help) {
   console.log(usage)
 } else {
-  console.log(nsaname.getNSAName())
+  console.log(nsaname.getNSAName(Math.random() > 0.7))
 }
