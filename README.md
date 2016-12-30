@@ -8,3 +8,24 @@
 
 
 Like petname, but for naming secret projects and tools.
+
+# Usage
+
+```
+$ nsaname --help
+
+NSA Name
+
+  Like petname, but for naming secret projects and tools.
+
+Options
+
+  --help    Print this usage guide.
+
+$ nsaname
+MaestroEntourage
+$ nsaname
+IronGenesis 4000
+$ nsaname
+PhotoGinsu 2.0
+```
