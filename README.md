@@ -1,5 +1,7 @@
 # nsaname
 
+[![Join the chat at https://gitter.im/nsaname/Lobby](https://badges.gitter.im/nsaname/Lobby.svg)](https://gitter.im/nsaname/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![view on npm](http://img.shields.io/npm/v/nsaname.svg)](https://www.npmjs.org/package/nsaname)
 [![npm module downloads](http://img.shields.io/npm/dt/nsaname.svg)](https://www.npmjs.org/package/nsaname)
 [![Build Status](https://travis-ci.org/rbanffy/nsaname.svg?branch=master)](https://travis-ci.org/rbanffy/nsaname)
