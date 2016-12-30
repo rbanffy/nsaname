@@ -1,0 +1,11 @@
+{
+    "name": "nsaname",
+    "version": "1.0.0",
+    "description": "Like petnames, but for naming secret projects and tools.",
+    "main": "index.js",
+    "author": "Ricardo Banffy <rbanffy@gmail.com>",
+    "license": "BSD",
+    "bin": {
+        "nsaname": "index.js"
+    }
+}
