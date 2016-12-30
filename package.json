@@ -12,7 +12,6 @@
   "dependencies": {
     "command-line-args": ">=3.0.5",
     "command-line-usage": ">=3.0.0",
-    "tap": ">=8.0.1"
   },
   "engines": {
     "node": ">=6.9.0"
