@@ -15,7 +15,7 @@
     "tap": ">=8.0.1"
   },
   "engines": {
-    "node": ">=0.12.18"
+    "node": ">=0.10.48"
   },
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
