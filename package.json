@@ -1,18 +1,26 @@
 {
-    "name": "nsaname",
-    "version": "1.0.1",
-    "description": "Like petname, but for naming secret projects and tools.",
-    "main": "index.js",
-    "author": "Ricardo Banffy <rbanffy@gmail.com>",
-    "license": "Apache-2.0",
-    "bin": {
-        "nsaname": "index.js"
-    },
-    "dependencies": {
-        "command-line-args": ">=3.0.5",
-        "command-line-usage": ">=3.0.0"
-    },
-    "engines": {
-        "node": ">=0.12.18"
-    }
+  "name": "nsaname",
+  "version": "1.0.2",
+  "description": "Like petname, but for naming secret projects and tools.",
+  "main": "index.js",
+  "author": "Ricardo Banffy <rbanffy@gmail.com>",
+  "license": "Apache-2.0",
+  "bin": {
+    "nsaname": "index.js"
+  },
+
+  "dependencies": {
+    "command-line-args": ">=3.0.5",
+    "command-line-usage": ">=3.0.0"
+  },
+  "engines": {
+    "node": ">=0.12.18"
+  },
+  "repository": "https://github.com/rbanffy/nsaname.git",
+  "devDependencies": {
+    "tap": ">=8.0.1"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  }
 }
