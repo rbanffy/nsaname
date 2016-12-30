@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-'use strict'
 /* eslint no-console: ["error", { allow: ["log"] }] */
 
 const getUsage = require('command-line-usage')
