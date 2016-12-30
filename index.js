@@ -116,15 +116,19 @@ const commandLineOptionDefinitions = [
 
 const options = commandLineArgs(commandLineOptionDefinitions)
 
-if (options.help) {
-  console.log(usage)
-} else {
+var getName = function () {
   var nsaname = first[Math.floor(Math.random() * first.length)] +
-        second[Math.floor(Math.random() * second.length)]
+      second[Math.floor(Math.random() * second.length)]
 
   if (Math.random() > 0.7) {
     nsaname += ' ' +
             suffixes[Math.floor(Math.random() * suffixes.length)]
   }
-  console.log(nsaname)
+  return nsaname
+}
+
+if (options.help) {
+  console.log(usage)
+} else {
+  console.log(getName())
 }
