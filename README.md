@@ -20,12 +20,21 @@ NSA Name
 
 Options
 
-  --help    Print this usage guide.
+  --help         Print this usage guide.
+  --lowercase    Output in lowercase.
+  --no-suffix    Don't add a suffix.
+  --hostname     Output a sensible hostname.
 
 $ nsaname
-MaestroEntourage
+SchoolSwap HX
 $ nsaname
-IronGenesis 4000
-$ nsaname
-PhotoGinsu 2.0
+WistfulMonkey 4000
+$ nsaname -l
+headset iii
+$ nsaname -n
+SchoolJeep
+$ nsaname -h
+swap-gram
+$ nsaname -h
+cotton-witch
 ```
