@@ -16,6 +16,18 @@ const helpSections = [
       {
         name: 'help',
         description: 'Print this usage guide.'
+      },
+      {
+        name: 'lowercase',
+        description: 'Output in lowercase.'
+      },
+      {
+        name: 'no-suffix',
+        description: "Don't add a suffix."
+      },
+      {
+        name: 'hostname',
+        description: 'Output a sensible hostname.'
       }
     ]
   }
@@ -26,9 +38,26 @@ const usage = getUsage(helpSections)
 const commandLineOptionDefinitions = [
   {
     name: 'help',
+    type: Boolean,
+    defaultValue: false
+  },
+  {
+    name: 'lowercase',
+    alias: 'l',
+    type: Boolean,
+    defaultValue: false
+  },
+  {
+    name: 'no-suffix',
+    alias: 'n',
+    type: Boolean,
+    defaultValue: false
+  },
+  {
+    name: 'hostname',
     alias: 'h',
     type: Boolean,
-    defaultOption: false
+    defaultValue: false
   }
 ]
 
@@ -37,5 +66,14 @@ const options = commandLineArgs(commandLineOptionDefinitions)
 if (options.help) {
   console.log(usage)
 } else {
-  console.log(nsaname.getNSAName(Math.random() > 0.7))
+  var name = nsaname.getNSAName(
+    !(options.hostname || options['no-suffix']),
+    options.hostname ? '-' : '')
+  if (options.hostname) {
+    name.replace(' ', '-')
+  }
+  if (options.lowercase || options.hostname) {
+    name = name.toLowerCase()
+  }
+  console.log(name)
 }
