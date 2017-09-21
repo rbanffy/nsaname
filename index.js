@@ -19,14 +19,17 @@ const helpSections = [
       },
       {
         name: 'lowercase',
+        alias: 'l',
         description: 'Output in lowercase.'
       },
       {
         name: 'no-suffix',
+        alias: 'm',
         description: "Don't add a suffix."
       },
       {
         name: 'hostname',
+        alias: 'h',
         description: 'Output a sensible hostname.'
       }
     ]
