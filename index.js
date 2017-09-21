@@ -69,7 +69,7 @@ const options = commandLineArgs(commandLineOptionDefinitions)
 if (options.help) {
   console.log(usage)
 } else {
-  var name = nsaname.getNSAName(
+  let name = nsaname.getNSAName(
     !(options.hostname || options['no-suffix']),
     options.hostname ? '-' : '')
   if (options.hostname) {
