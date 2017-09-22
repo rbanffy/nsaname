@@ -19,14 +19,17 @@ const helpSections = [
       },
       {
         name: 'lowercase',
+        alias: 'l',
         description: 'Output in lowercase.'
       },
       {
         name: 'no-suffix',
+        alias: 'm',
         description: "Don't add a suffix."
       },
       {
         name: 'hostname',
+        alias: 'h',
         description: 'Output a sensible hostname.'
       }
     ]
@@ -66,7 +69,7 @@ const options = commandLineArgs(commandLineOptionDefinitions)
 if (options.help) {
   console.log(usage)
 } else {
-  var name = nsaname.getNSAName(
+  let name = nsaname.getNSAName(
     !(options.hostname || options['no-suffix']),
     options.hostname ? '-' : '')
   if (options.hostname) {
