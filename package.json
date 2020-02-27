@@ -10,15 +10,15 @@
   },
 
   "dependencies": {
-    "command-line-args": ">=3.0.5",
-    "command-line-usage": ">=3.0.0"
+    "command-line-args": ">=5.1.1",
+    "command-line-usage": ">=6.1.0"
   },
   "engines": {
-    "node": ">=6.9.0"
+    "node": ">=13.8.0"
   },
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
-    "tap": ">=8.0.1"
+    "tap": ">=14.10.6"
   },
   "scripts": {
     "test": "tap test/*.js"
