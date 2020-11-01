@@ -8,7 +8,6 @@
   "bin": {
     "nsaname": "index.js"
   },
-
   "dependencies": {
     "command-line-args": ">=5.1.1",
     "command-line-usage": ">=6.1.0"
@@ -18,7 +17,7 @@
   },
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
-    "tap": ">=14.10.6"
+    "tap": "^14.10.8"
   },
   "scripts": {
     "test": "tap test/*.js"
