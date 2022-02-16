@@ -38,3 +38,6 @@ jspm_packages
 
 # Misc others
 *~
+
+# Lock file
+package-lock.json
