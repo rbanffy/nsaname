@@ -17,7 +17,7 @@
   },
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
-    "tap": "^16.3.4"
+    "tap": "^19.0.2"
   },
   "scripts": {
     "test": "tap test/*.js"
