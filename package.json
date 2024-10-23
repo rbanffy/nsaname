@@ -9,15 +9,15 @@
     "nsaname": "index.js"
   },
   "dependencies": {
-    "command-line-args": ">=5.1.1",
-    "command-line-usage": ">=6.1.0"
+    "command-line-args": ">=6.0.0",
+    "command-line-usage": ">=7.0.3"
   },
   "engines": {
     "node": ">=13.8.0"
   },
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
-    "tap": "^16.3.4"
+    "tap": "^21.0.1"
   },
   "scripts": {
     "test": "tap test/*.js"

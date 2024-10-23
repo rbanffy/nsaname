@@ -41,3 +41,6 @@ jspm_packages
 
 # Lock file
 package-lock.json
+
+# Tap folder
+.tap
