@@ -5,12 +5,11 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
 [![Join the chat at https://gitter.im/nsaname/Lobby](https://badges.gitter.im/nsaname/Lobby.svg)](https://gitter.im/nsaname/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-
 Like petname, but for naming secret projects and tools.
 
-# Usage
+## Usage
 
-```
+```text
 $ nsaname --help
 
 NSA Name
