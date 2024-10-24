@@ -7,6 +7,12 @@
 
 Like petname, but for naming secret projects and tools.
 
+## Installing
+
+```shell
+npm install nsaname
+```
+
 ## Usage
 
 ```text
