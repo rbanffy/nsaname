@@ -1,9 +1,8 @@
 const tap = require('tap')
 const nsaname = require('../lib/nsaname.js')
 
-var name = nsaname.getNSAName()
-
 // Test default behavior.
+var name = nsaname.getNSAName()
 tap.ok(nsaname.wordLists.first.some(
   function (n) { return name.indexOf(n) > -1 }))
 tap.ok(nsaname.wordLists.second.some(
