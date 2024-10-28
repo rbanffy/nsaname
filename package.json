@@ -21,5 +21,17 @@
   },
   "scripts": {
     "test": "tap test/*.js"
-  }
+  },
+  "keywords": [
+    "generate",
+    "hostname",
+    "javascript",
+    "library",
+    "names",
+    "pet-name",
+    "petname",
+    "petnames",
+    "random",
+    "utility"
+  ]
 }
