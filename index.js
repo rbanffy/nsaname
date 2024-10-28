@@ -24,7 +24,7 @@ const helpSections = [
       },
       {
         name: 'no-suffix',
-        alias: 'm',
+        alias: 'n',
         description: "Don't add a suffix."
       },
       {
