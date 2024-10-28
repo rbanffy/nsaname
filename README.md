@@ -42,3 +42,25 @@ swap-gram
 $ nsaname -h
 cotton-witch
 ```
+
+## Developing
+
+Check out the current develop branch and run `npm install`. To run the program:
+
+```text
+$ node index.js --help
+Debugger attached.
+
+NSA Name
+
+  Like petname, but for naming secret projects and tools.
+
+Options
+
+  --help string            Print this usage guide.
+  -l, --lowercase string   Output in lowercase.
+  -n, --no-suffix string   Don't add a suffix.
+  -h, --hostname string    Output a sensible hostname.
+
+Waiting for the debugger to disconnect...
+```
