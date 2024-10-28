@@ -1,6 +1,6 @@
 {
   "name": "nsaname",
-  "version": "1.0.15",
+  "version": "2.0.0",
   "description": "Like petname, but for naming secret projects and tools.",
   "main": "index.js",
   "author": "Ricardo Banffy <rbanffy@gmail.com>",
