@@ -64,3 +64,9 @@ Options
 
 Waiting for the debugger to disconnect...
 ```
+
+For running unit tests, you can:
+
+```shell
+npm run test
+```
