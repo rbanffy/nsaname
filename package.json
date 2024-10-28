@@ -6,7 +6,7 @@
   "author": "Ricardo Banffy <rbanffy@gmail.com>",
   "license": "Apache-2.0",
   "bin": {
-    "nsaname": "index.js"
+    "nsaname": "src/index.js"
   },
   "dependencies": {
     "command-line-args": ">=6.0.0",

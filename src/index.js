@@ -3,7 +3,7 @@
 
 const getUsage = require('command-line-usage')
 const commandLineArgs = require('command-line-args')
-const nsaname = require('./lib/nsaname.js')
+const nsaname = require('./nsaname.js')
 
 const helpSections = [
   {

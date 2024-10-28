@@ -1,5 +1,5 @@
 const tap = require('tap')
-const nsaname = require('../lib/nsaname.js')
+const nsaname = require('../src/nsaname.js')
 
 // Test default behavior.
 var name = nsaname.getNSAName()
