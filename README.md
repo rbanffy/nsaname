@@ -70,3 +70,7 @@ For running unit tests, you can:
 ```shell
 npm run test
 ```
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=rbanffy/nsaname&type=Date)](https://star-history.com/#rbanffy/nsaname&Date)
+
