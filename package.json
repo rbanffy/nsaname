@@ -9,15 +9,16 @@
     "nsaname": "src/index.js"
   },
   "dependencies": {
-    "command-line-args": ">=6.0.0",
-    "command-line-usage": ">=7.0.3"
+    "command-line-args": ">=6.0.1",
+    "command-line-usage": ">=7.0.3",
+    "npm-check-updates": "^18.0.2"
   },
   "engines": {
     "node": ">=13.8.0"
   },
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
-    "tap": ">=21.0.1"
+    "tap": ">=21.1.0"
   },
   "scripts": {
     "test": "tap test/*.js"
