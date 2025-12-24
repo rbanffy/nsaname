@@ -6,8 +6,9 @@
 [![Join the chat at https://gitter.im/nsaname/Lobby](https://badges.gitter.im/nsaname/Lobby.svg)](https://gitter.im/nsaname/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Like petname, but for naming secret projects and tools.
+Comes in a Node.js and a [POSIX shell](#shell-version) version.
 
-## Installing
+## NPM installation
 
 ```shell
 npm install nsaname
@@ -43,6 +44,12 @@ $ nsaname -h
 cotton-witch
 ```
 
+## Shell Version
+
+The repository includes a POSIX shell script version of the program, `nsaname.sh`.
+It doesn't require Node.js but requires [jq](https://jqlang.org/) for JSON parsing and `/dev/urandom` for random number generation.
+The shell script version reads name data from the path indicated in the environment variable `NSANAME_JSON`, or `src/nsaname.json` by default.
+
 ## Developing
 
 Check out the current develop branch and run `npm install`. To run the program:
@@ -70,7 +77,7 @@ For running unit tests, you can:
 ```shell
 npm run test
 ```
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=rbanffy/nsaname&type=Date)](https://star-history.com/#rbanffy/nsaname&Date)
-
