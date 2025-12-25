@@ -1,8 +1,9 @@
 #! /bin/sh
+set -eu
 
 # Path to the JSON data file.
-if [ -z "$NSANAME_JSON" ]; then
-    NSANAME_JSON=src/nsaname.json
+if [ -z "${NSANAME_JSON:-}" ]; then
+    NSANAME_JSON=$(dirname "$0")/nsaname.json
 fi
 
 usage() {

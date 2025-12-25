@@ -46,9 +46,10 @@ cotton-witch
 
 ## Shell Version
 
-The repository includes a POSIX shell script version of the program, `nsaname.sh`.
+The repository includes a POSIX shell script version of the program, [`src/nsaname.sh`](src/nsaname.sh).
 It doesn't require Node.js but requires [jq](https://jqlang.org/) for JSON parsing and `/dev/urandom` for random number generation.
-The shell script version reads name data from the path indicated in the environment variable `NSANAME_JSON`, or `src/nsaname.json` by default.
+
+The shell script version reads name data from the path indicated in the environment variable `NSANAME_JSON`, or `<script-path>/nsaname.json` by default.
 
 ## Developing
 
