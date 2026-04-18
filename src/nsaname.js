@@ -277,6 +277,7 @@ const first = [
 ]
 
 const second = [
+  'Acid',
   'Alamo',
   'Angel',
   'Anglo',
@@ -330,6 +331,7 @@ const second = [
   'Certain',
   'Chair',
   'Chalet',
+  'Chaser',
   'Chef',
   'Chiefdom',
   'Cinnamon',
@@ -445,6 +447,7 @@ const second = [
   'Midnight',
   'Mini',
   'Mint',
+  'Mist',
   'Monk',
   'Monkey',
   'Montana',
@@ -540,6 +543,7 @@ const second = [
   'Sting',
   'Stomper',
   'Strike',
+  'Surge',
   'Surf',
   'Swap',
   'Sweeper',
@@ -562,6 +566,7 @@ const second = [
   'Trap',
   'Treeform',
   'Trinity',
+  'Trumpet',
   'Tutu',
   'Typhon',
   'Usurper',
@@ -584,6 +589,7 @@ const second = [
   'Whispers',
   'Whistle',
   'Widow',
+  'Wind',
   'Windblown',
   'Wire',
   'Witch',
