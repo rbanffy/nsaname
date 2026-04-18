@@ -70,6 +70,13 @@ For running unit tests, you can:
 ```shell
 npm run test
 ```
+## Sources
+
+The word lists used to generate names are derived from:
+
+- [NSA ANT catalog](https://en.wikipedia.org/wiki/NSA_ANT_catalog) — a classified catalog of tools and techniques used by the NSA's Tailored Access Operations (TAO) division
+- [NSA Codenames, Covernames, and Suggested Use/Implementation](https://christopher-parsons.com/resources/the-sigint-summaries/nsa-codenames-covernames-and-suggested-use-implementation/) — a compilation of NSA codenames and covernames from the Snowden documents
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=rbanffy/nsaname&type=Date)](https://star-history.com/#rbanffy/nsaname&Date)
