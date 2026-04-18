@@ -10,14 +10,14 @@
   },
   "dependencies": {
     "command-line-args": ">=6.0.1",
-    "command-line-usage": ">=7.0.3",
-    "npm-check-updates": "^18.0.2"
+    "command-line-usage": ">=7.0.3"
   },
   "engines": {
     "node": ">=13.8.0"
   },
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
+    "npm-check-updates": "^18.0.2",
     "tap": ">=21.1.0"
   },
   "scripts": {
