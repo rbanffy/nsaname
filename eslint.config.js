@@ -1,24 +1,25 @@
-module.exports = {
-    "env": {
-        "es6": true,
-        "node": true
+const js = require('@eslint/js')
+
+module.exports = [
+  js.configs.recommended,
+  {
+    languageOptions: {
+      ecmaVersion: 2017,
+      sourceType: 'module',
+      globals: {
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        process: 'readonly',
+        console: 'readonly',
+      },
     },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-        "sourceType": "module"
+    rules: {
+      indent: ['error', 2],
+      'linebreak-style': ['error', 'unix'],
+      semi: ['error', 'never'],
     },
-    "rules": {
-        "indent": [
-            "error",
-            2 
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
-    }
-};
+  },
+]
