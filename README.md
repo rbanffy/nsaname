@@ -43,6 +43,54 @@ $ nsaname -h
 cotton-witch
 ```
 
+## Using nsaname as a library
+
+`nsaname` can be used as a library in your own Node.js programs:
+
+```javascript
+const { getNSAName, wordLists } = require('nsaname')
+
+// Generate a name with a random suffix and no separator
+console.log(getNSAName())
+// e.g. "GhostMachine 4000"
+
+// Pass a specific suffix (or falsy to omit it) and a custom separator
+console.log(getNSAName('II', ' '))
+// e.g. "IronChef II"
+
+// Omit the suffix entirely
+console.log(getNSAName(null, ' '))
+// e.g. "Dark Thunder"
+
+// Lowercase hostname-style name
+console.log(getNSAName(null, '-').toLowerCase())
+// e.g. "golden-retriever"
+
+// Access the raw word lists directly
+console.log(wordLists.first)   // array of first words
+console.log(wordLists.second)  // array of second words
+console.log(wordLists.suffixes) // array of suffixes
+```
+
+### API
+
+#### `getNSAName(suffix, separator)`
+
+Returns a randomly generated NSA-style name string.
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `suffix` | string\|falsy | `undefined` | When truthy, appends a random suffix (e.g. `'II'`, `'9000'`). When falsy, no suffix is added. Pass `undefined` to use a random suffix. |
+| `separator` | string | `undefined` | String placed between the two name words. Use `' '` for a space or `'-'` for a hostname-safe name. |
+
+#### `wordLists`
+
+An object exposing the three source arrays used to build names:
+
+- `wordLists.first` — first-word components
+- `wordLists.second` — second-word components
+- `wordLists.suffixes` — version/suffix tokens
+
 ## Developing
 
 Check out the current develop branch and run `npm install`. To run the program:
