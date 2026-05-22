@@ -1,10 +1,12 @@
-const js = require('@eslint/js')
+import eslint from '@eslint/js';
+import tseslint from 'typescript-eslint';
 
-module.exports = [
-  js.configs.recommended,
+export default tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     languageOptions: {
-      ecmaVersion: 2017,
+      ecmaVersion: 2020,
       sourceType: 'module',
       globals: {
         require: 'readonly',
@@ -20,6 +22,7 @@ module.exports = [
       indent: ['error', 2],
       'linebreak-style': ['error', 'unix'],
       semi: ['error', 'never'],
+      '@typescript-eslint/no-require-imports': 'off',
     },
-  },
-]
+  }
+);
