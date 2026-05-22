@@ -5,7 +5,7 @@
 // - https://christopher-parsons.com/resources/the-sigint-summaries/nsa-codenames-covernames-and-suggested-use-implementation/
 // - https://www.electrospaces.net/p/nicknames-and-codewords.html
 
-const first = [
+const first: string[] = [
   'Aardvark',
   'Absoline',
   'Acrid',
@@ -289,7 +289,7 @@ const first = [
   'Yarn'
 ]
 
-const second = [
+const second: string[] = [
   'Acid',
   'Alamo',
   'Angel',
@@ -639,7 +639,7 @@ const second = [
   'Zero'
 ]
 
-const suffixes = [
+const suffixes: string[] = [
   '2.0',
   '2000',
   '3.0',
@@ -662,7 +662,7 @@ const suffixes = [
  *
  * @return {string}
  */
-function getNSAName (suffix, separator) {
+export function getNSAName (suffix?: boolean, separator: string = ''): string {
   let nsaname = first[Math.floor(Math.random() * first.length)] +
       separator + second[Math.floor(Math.random() * second.length)]
 
@@ -673,11 +673,10 @@ function getNSAName (suffix, separator) {
   return nsaname
 }
 
-module.exports = {
-  getNSAName: getNSAName,
-  wordLists: {
-    first: first,
-    second: second,
-    suffixes: suffixes
-  }
+export const wordLists = {
+  first: first,
+  second: second,
+  suffixes: suffixes
 }
+
+export default { getNSAName, wordLists }

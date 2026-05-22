@@ -93,27 +93,20 @@ An object exposing the three source arrays used to build names:
 
 ## Developing
 
-Check out the current develop branch and run `npm install`. To run the program:
+Check out the current develop branch and run `npm install`. The source is
+written in TypeScript. To run the CLI directly from the TypeScript sources:
 
-```text
-$ node index.js --help
-Debugger attached.
-
-NSA Name
-
-  Like petname, but for naming secret projects and tools.
-
-Options
-
-  --help string            Print this usage guide.
-  -l, --lowercase string   Output in lowercase.
-  -n, --no-suffix string   Don't add a suffix.
-  -h, --hostname string    Output a sensible hostname.
-
-Waiting for the debugger to disconnect...
+```shell
+npx tsx src/index.ts --help
 ```
 
-For running unit tests, you can:
+To produce the compiled output that gets published (in `dist/`):
+
+```shell
+npm run build
+```
+
+For running unit tests (which also builds the project):
 
 ```shell
 npm run test

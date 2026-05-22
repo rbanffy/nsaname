@@ -41,3 +41,7 @@ jspm_packages
 
 # Tap folder
 .tap
+
+# TypeScript build output
+dist
+*.tsbuildinfo

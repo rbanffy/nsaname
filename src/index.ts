@@ -1,9 +1,16 @@
 #! /usr/bin/env node
 /* eslint no-console: ["error", { allow: ["log"] }] */
 
-const getUsage = require('command-line-usage')
-const commandLineArgs = require('command-line-args')
-const nsaname = require('./nsaname.js')
+import getUsage from 'command-line-usage'
+import commandLineArgs from 'command-line-args'
+import { getNSAName } from './nsaname'
+
+interface CliOptions {
+  help: boolean
+  lowercase: boolean
+   'no-suffix': boolean
+  hostname: boolean
+}
 
 const helpSections = [
   {
@@ -64,16 +71,16 @@ const commandLineOptionDefinitions = [
   }
 ]
 
-const options = commandLineArgs(commandLineOptionDefinitions)
+const options = commandLineArgs(commandLineOptionDefinitions) as CliOptions
 
 if (options.help) {
   console.log(usage)
 } else {
-  let name = nsaname.getNSAName(
+  let name = getNSAName(
     !(options.hostname || options['no-suffix']),
     options.hostname ? '-' : '')
   if (options.hostname) {
-    name.replace(' ', '-')
+    name = name.replace(' ', '-')
   }
   if (options.lowercase || options.hostname) {
     name = name.toLowerCase()

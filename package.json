@@ -2,11 +2,15 @@
   "name": "nsaname",
   "version": "2.0.3",
   "description": "Like petname, but for naming secret projects and tools.",
-  "main": "index.js",
+  "main": "dist/src/nsaname.js",
+  "types": "dist/src/nsaname.d.ts",
+  "files": [
+    "dist"
+  ],
   "author": "Ricardo Banffy <rbanffy@gmail.com>",
   "license": "Apache-2.0",
   "bin": {
-    "nsaname": "src/index.js"
+    "nsaname": "dist/src/index.js"
   },
   "dependencies": {
     "command-line-args": ">=6.0.2",
@@ -18,12 +22,20 @@
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
     "@eslint/js": ">=9.0.0",
+    "@types/command-line-args": "^5.2.3",
+    "@types/command-line-usage": "^5.0.4",
+    "@types/node": "^20.0.0",
+    "@types/tap": "^15.0.11",
     "eslint": ">=9.0.0",
     "npm-check-updates": "^21.0.2",
-    "tap": ">=21.7.1"
+    "tap": ">=21.7.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
   },
   "scripts": {
-    "test": "tap test/*.js",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "tsc && tap dist/test/**/*.js",
     "lint": "eslint src/ test/"
   },
   "keywords": [
