@@ -79,9 +79,9 @@ console.log(wordLists.suffixes) // array of suffixes
 Returns a randomly generated NSA-style name string.
 
 | Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `suffix` | string\|falsy | `undefined` | When truthy, appends a random suffix (e.g. `'II'`, `'9000'`). When falsy, no suffix is added. Pass `undefined` to use a random suffix. |
-| `separator` | string | `undefined` | String placed between the two name words. Use `' '` for a space or `'-'` for a hostname-safe name. |
+|---|---|---|---|
+| `suffix` | boolean | `false` | When truthy, appends a random suffix (e.g. `'II'`, `'9000'`). When falsy, no suffix is added. |
+| `separator` | string | `''` | String placed between the two name words. Use `' '` for a space or `'-'` for a hostname-safe name. |
 
 #### `wordLists`
 
