@@ -94,7 +94,7 @@ An object exposing the three source arrays used to build names:
 ## Developing
 
 Check out the current develop branch and run `npm install`. The source is
-written in TypeScript. To run the CLI directly from the TypeScript sources:
+written in TypeScript. To run the CLI directly from the TypeScript sources using the `npx` tool:
 
 ```shell
 npx tsx src/index.ts --help
