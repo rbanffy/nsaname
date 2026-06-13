@@ -54,9 +54,9 @@ const { getNSAName, wordLists } = require('nsaname')
 console.log(getNSAName())
 // e.g. "GhostMachine 4000"
 
-// Pass a specific suffix (or falsy to omit it) and a custom separator
-console.log(getNSAName('II', ' '))
-// e.g. "IronChef II"
+// Append a random suffix, with a custom separator between the words
+console.log(getNSAName(true, ' '))
+// e.g. "Iron Chef II"
 
 // Omit the suffix entirely
 console.log(getNSAName(null, ' '))
