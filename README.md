@@ -119,6 +119,9 @@ The word lists used to generate names are derived from:
 - [NSA ANT catalog](https://en.wikipedia.org/wiki/NSA_ANT_catalog) — a classified catalog of tools and techniques used by the NSA's Tailored Access Operations (TAO) division
 - [NSA Codenames, Covernames, and Suggested Use/Implementation](https://christopher-parsons.com/resources/the-sigint-summaries/nsa-codenames-covernames-and-suggested-use-implementation/) — a compilation of NSA codenames and covernames from the Snowden documents
 - [NSA Nicknames and Codewords](https://www.electrospaces.net/p/nicknames-and-codewords.html) — a comprehensive listing of ~1400 NSA SIGINT and COMSEC nicknames and codewords
+- [Catalog Reveals NSA Has Back Doors for Numerous Devices](https://www.spiegel.de/international/world/catalog-reveals-nsa-has-back-doors-for-numerous-devices-a-940994.html) — Der Spiegel reporting on ANT catalog tooling codewords
+- [How the NSA’s Firmware Hacking Works and Why It’s So Unsettling](https://www.wired.com/2015/02/nsa-firmware-hacking/) — public reporting on the Equation Group and ANT-related firmware codewords
+- [The NSA’s Secret Role in the U.S. Assassination Program](https://theintercept.com/2014/02/10/the-nsas-secret-role/) — reporting on operation and platform codenames used in signals intelligence targeting
 
 ## Star History
 
