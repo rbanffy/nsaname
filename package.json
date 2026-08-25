@@ -1,27 +1,42 @@
 {
   "name": "nsaname",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "Like petname, but for naming secret projects and tools.",
-  "main": "index.js",
+  "main": "dist/src/nsaname.js",
+  "types": "dist/src/nsaname.d.ts",
+  "files": [
+    "dist"
+  ],
   "author": "Ricardo Banffy <rbanffy@gmail.com>",
   "license": "Apache-2.0",
   "bin": {
-    "nsaname": "src/index.js"
+    "nsaname": "dist/src/index.js"
   },
   "dependencies": {
-    "command-line-args": ">=6.0.1",
-    "command-line-usage": ">=7.0.3",
-    "npm-check-updates": "^18.0.2"
+    "command-line-args": ">=6.0.2",
+    "command-line-usage": ">=7.0.4"
   },
   "engines": {
-    "node": ">=13.8.0"
+    "node": ">=20.0.0"
   },
   "repository": "https://github.com/rbanffy/nsaname.git",
   "devDependencies": {
-    "tap": ">=21.1.0"
+    "@eslint/js": ">=10.0.1",
+    "@types/command-line-args": "^5.2.3",
+    "@types/command-line-usage": "^5.0.4",
+    "@types/node": "^26.3.0",
+    "eslint": ">=10.9.1",
+    "npm-check-updates": "^23.1.0",
+    "tap": ">=21.7.5",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.68.0"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "tsc && tap dist/test/**/*.js",
+    "lint": "eslint src/ test/"
   },
   "keywords": [
     "generate",

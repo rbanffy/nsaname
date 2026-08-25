@@ -1,9 +1,16 @@
 #! /usr/bin/env node
-/* eslint no-console: ["error", { allow: ["log"] }] */
+/* eslint no-console: ["error", { allow: ["log", "error"] }] */
 
-const getUsage = require('command-line-usage')
-const commandLineArgs = require('command-line-args')
-const nsaname = require('./nsaname.js')
+import getUsage from 'command-line-usage'
+import commandLineArgs from 'command-line-args'
+import { getNSAName } from './nsaname'
+
+interface CliOptions {
+  help: boolean
+  lowercase: boolean
+   'no-suffix': boolean
+  hostname: boolean
+}
 
 const helpSections = [
   {
@@ -64,16 +71,28 @@ const commandLineOptionDefinitions = [
   }
 ]
 
-const options = commandLineArgs(commandLineOptionDefinitions)
+const cliParseErrorNames = ['UNKNOWN_OPTION', 'UNKNOWN_VALUE']
+
+let options: CliOptions
+try {
+  options = commandLineArgs(commandLineOptionDefinitions) as CliOptions
+} catch (error) {
+  if (!(error instanceof Error) || !cliParseErrorNames.includes(error.name)) {
+    throw error
+  }
+  console.error(`Error: ${error.message}\n`)
+  console.error(usage)
+  process.exit(1)
+}
 
 if (options.help) {
   console.log(usage)
 } else {
-  let name = nsaname.getNSAName(
+  let name = getNSAName(
     !(options.hostname || options['no-suffix']),
     options.hostname ? '-' : '')
   if (options.hostname) {
-    name.replace(' ', '-')
+    name = name.replace(' ', '-')
   }
   if (options.lowercase || options.hostname) {
     name = name.toLowerCase()

@@ -39,8 +39,9 @@ jspm_packages
 # Misc others
 *~
 
-# Lock file
-package-lock.json
-
 # Tap folder
 .tap
+
+# TypeScript build output
+dist
+*.tsbuildinfo

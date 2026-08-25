@@ -43,34 +43,86 @@ $ nsaname -h
 cotton-witch
 ```
 
-## Developing
+## Using nsaname as a library
 
-Check out the current develop branch and run `npm install`. To run the program:
+`nsaname` can be used as a library in your own Node.js programs:
 
-```text
-$ node index.js --help
-Debugger attached.
+```javascript
+const { getNSAName, wordLists } = require('nsaname')
 
-NSA Name
+// Generate a name with a random suffix and no separator
+console.log(getNSAName())
+// e.g. "GhostMachine 4000"
 
-  Like petname, but for naming secret projects and tools.
+// Append a random suffix, with a custom separator between the words
+console.log(getNSAName(true, ' '))
+// e.g. "Iron Chef II"
 
-Options
+// Omit the suffix entirely
+console.log(getNSAName(null, ' '))
+// e.g. "Dark Thunder"
 
-  --help string            Print this usage guide.
-  -l, --lowercase string   Output in lowercase.
-  -n, --no-suffix string   Don't add a suffix.
-  -h, --hostname string    Output a sensible hostname.
+// Lowercase hostname-style name
+console.log(getNSAName(null, '-').toLowerCase())
+// e.g. "golden-retriever"
 
-Waiting for the debugger to disconnect...
+// Access the raw word lists directly
+console.log(wordLists.first)   // array of first words
+console.log(wordLists.second)  // array of second words
+console.log(wordLists.suffixes) // array of suffixes
 ```
 
-For running unit tests, you can:
+### API
+
+#### `getNSAName(suffix, separator)`
+
+Returns a randomly generated NSA-style name string.
+
+| Parameter | Type | Default | Description |
+|---|---|---|---|
+| `suffix` | boolean | `false` | When truthy, appends a random suffix (e.g. `'II'`, `'9000'`). When falsy, no suffix is added. |
+| `separator` | string | `''` | String placed between the two name words. Use `' '` for a space or `'-'` for a hostname-safe name. |
+
+#### `wordLists`
+
+An object exposing the three source arrays used to build names:
+
+- `wordLists.first` — first-word components
+- `wordLists.second` — second-word components
+- `wordLists.suffixes` — version/suffix tokens
+
+## Developing
+
+Check out the current develop branch and run `npm install`. The source is
+written in TypeScript. To run the CLI directly from the TypeScript sources using the `npx` tool:
+
+```shell
+npx tsx src/index.ts --help
+```
+
+To produce the compiled output that gets published (in `dist/`):
+
+```shell
+npm run build
+```
+
+For running unit tests (which also builds the project):
 
 ```shell
 npm run test
 ```
+
+## Sources
+
+The word lists used to generate names are derived from:
+
+- [NSA ANT catalog](https://en.wikipedia.org/wiki/NSA_ANT_catalog) — a classified catalog of tools and techniques used by the NSA's Tailored Access Operations (TAO) division
+- [NSA Codenames, Covernames, and Suggested Use/Implementation](https://christopher-parsons.com/resources/the-sigint-summaries/nsa-codenames-covernames-and-suggested-use-implementation/) — a compilation of NSA codenames and covernames from the Snowden documents
+- [NSA Nicknames and Codewords](https://www.electrospaces.net/p/nicknames-and-codewords.html) — a comprehensive listing of ~1400 NSA SIGINT and COMSEC nicknames and codewords
+- [Catalog Reveals NSA Has Back Doors for Numerous Devices](https://www.spiegel.de/international/world/catalog-reveals-nsa-has-back-doors-for-numerous-devices-a-940994.html) — Der Spiegel reporting on ANT catalog tooling codewords
+- [How the NSA’s Firmware Hacking Works and Why It’s So Unsettling](https://www.wired.com/2015/02/nsa-firmware-hacking/) — public reporting on the Equation Group and ANT-related firmware codewords
+- [The NSA’s Secret Role in the U.S. Assassination Program](https://theintercept.com/2014/02/10/the-nsas-secret-role/) — reporting on operation and platform codenames used in signals intelligence targeting
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=rbanffy/nsaname&type=Date)](https://star-history.com/#rbanffy/nsaname&Date)
-
